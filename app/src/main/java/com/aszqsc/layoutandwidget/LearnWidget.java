@@ -8,10 +8,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class LearnWidget extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+    boolean check=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -50,5 +51,17 @@ public class LearnWidget extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void Switchcl(View view) {
+        if(check) {
+            ImageView m = findViewById(R.id.imgview);
+            m.setVisibility(View.INVISIBLE);
+        }
+        else{
+            ImageView m = findViewById(R.id.imgview);
+            m.setVisibility(View.VISIBLE);
+        }
+        check=!check;
     }
 }
