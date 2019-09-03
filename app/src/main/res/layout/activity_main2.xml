@@ -20,11 +20,12 @@
             android:layout_height="match_parent"
             android:background="#00CF3C3C"
             android:contentDescription="UED logo"
-            app:srcCompat="@drawable/Dai_hoc_Su_pham_Da_Nang" />
+            app:srcCompat="@drawable/dhsp" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView2"
+        android:contentDescription="anhbia"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="fitXY"

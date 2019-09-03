@@ -8,7 +8,9 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //getActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
     }
 }
