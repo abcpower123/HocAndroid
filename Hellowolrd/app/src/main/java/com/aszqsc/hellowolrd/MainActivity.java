@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         int b=Integer.parseInt(pright.getText().toString());
 
         if((view.getId()==pleft.getId()&&a>b)||(view.getId()==pright.getId()&&a<=b)){
-            Toast.makeText(this,"Right",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Rightt",Toast.LENGTH_SHORT).show();
             score++;
         }
         else{
