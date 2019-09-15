@@ -27,7 +27,7 @@ public class LearnWidget extends AppCompatActivity implements AdapterView.OnItem
 
         Spinner dropdown=findViewById(R.id.spinner);
         String []items =new String[] {"1","2","3"};
-        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,items);
+        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,items);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dropdown.setAdapter(adapter);
 
@@ -40,6 +40,7 @@ public class LearnWidget extends AppCompatActivity implements AdapterView.OnItem
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         TextView t=findViewById(R.id.txtT);
         ImageView m=findViewById(R.id.imgview);
+
         m.setImageDrawable(getResources().getDrawable(R.drawable.dhsp));
         switch (i){
             case 0: t.setText("This is picture 1"); m.setImageDrawable(getResources().getDrawable(R.drawable.phone)); break;

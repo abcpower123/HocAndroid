@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent=new Intent(getBaseContext(),LearnWidget.class);
         startActivity(myIntent);
     }
+
+    public void GotoListView(View view) {
+        Intent myIntent=new Intent(getBaseContext(),LearnListView.class);
+        startActivity(myIntent);
+    }
 }

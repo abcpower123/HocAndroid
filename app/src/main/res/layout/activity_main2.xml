@@ -70,6 +70,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:background="#FFFFFF"
                     app:srcCompat="@drawable/phone" />
 
                 <TextView
@@ -89,18 +90,20 @@
 
                 <ImageView
 
-                    android:layout_width="32dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:layout_gravity="center"
                     app:srcCompat="@drawable/address" />
 
                 <TextView
 
-                    android:layout_width="323dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Số 459 Tôn Đức Thắng, Liên Chiểu, Đà Nẵng"
+                    android:text=" Số 459 Tôn Đức Thắng, Liên Chiểu"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
