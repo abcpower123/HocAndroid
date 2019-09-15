@@ -2,6 +2,7 @@ package com.aszqsc.hellowolrd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,5 +39,10 @@ public class MainActivity extends AppCompatActivity {
         TextView point= findViewById(R.id.tvscore);
         point.setText("Your score: "+ String.valueOf(score));
         getNewNum(pleft,pright);
+    }
+
+    public void testnavi(View view) {
+        Intent myIntent=new Intent(getBaseContext(),Main2Activity.class);
+        startActivity(myIntent);
     }
 }
