@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     //code for recoginze activity for result
@@ -131,9 +134,21 @@ public class MainActivity extends AppCompatActivity {
         File imageCapture=new File(savePath);
         Log.d("Capture location:",savePath);
          uri=Uri.fromFile(imageCapture);
+
+//         File imagepath=new File(this.getFilesDir(),"images");
+//         File imageFile=new File(imagepath,"test image from file provider.jpg");
+//         Log.d("Caputre location: ",imageFile.getAbsolutePath());
+//         uri= FileProvider.getUriForFile(this,"com.aszqsc.hocactivitiy.fileprovider",imageFile);
+
         Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+
         this.startActivityForResult(intent,CAPTURE);
+//        List<ResolveInfo> resInfoList = this.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+//        for (ResolveInfo resolveInfo : resInfoList) {
+//            String packageName = resolveInfo.activityInfo.packageName;
+//            this.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//        }
     }
 
     @Override
